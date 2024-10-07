@@ -20,7 +20,38 @@ class Program
 
         for(int i=0; i<grades.Length; i++)
         {
-            Console.Write(grades[i] + " ");
+            if(100 >= grades[i] && grades[i] >= 90) //between 90 and 100
+            {
+                if(grades[i] == 100)
+                    Console.WriteLine(grades[i] + ": WOW! A perfect score!");
+                else
+                    Console.WriteLine(grades[i] + ": This grade is an A.");
+            }
+
+            else if (89 >= grades[i] && grades[i] >= 80)
+            {
+                Console.WriteLine(grades[i] + ": This grade is a B.");
+            }
+
+            else if (79 >= grades[i] && grades[i] >= 70)
+            {
+                Console.WriteLine(grades[i] + ": This grade is a C.");
+            }
+
+            else if (69 >= grades[i] && grades[i] >= 65)
+            {
+                Console.WriteLine(grades[i] + ": This grade is a D.");
+            }
+
+            else if (64 >= grades[i] && grades[i] >= 0)
+            {
+                Console.WriteLine(grades[i] + ": This grade is an F.");
+            }
+
+            else
+            {
+                Console.WriteLine(grades[i] + ": This is out of the range of 0-100. How did you even get this grade?");
+            }
         }
     }
 }
